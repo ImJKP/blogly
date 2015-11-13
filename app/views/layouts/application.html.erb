@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% if current_user %>
+  <title>My Blog</title>
+  <% else %>
+  <title>Blogly</title>
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<%= render "nav_partials/navigation" %>
+
+<%= yield %>
+
+<%= render "nav_partials/footer" %>
+
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

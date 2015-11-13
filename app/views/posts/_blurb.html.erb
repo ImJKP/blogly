@@ -1,0 +1,15 @@
+<div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="<%= @a_post.cover %>" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3><%= @a_post.title %></h3>
+                <p><%= @a_post.body.first(200) %><% if @a_post.body.length > 200 %>...<% end %></p>
+                <%= link_to 'View Post', post_path(@a_post.id), class: "btn btn-primary" %>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
