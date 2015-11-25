@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+  
   Rails.application.routes.default_url_options[:host] = 'http://ujkka8fed66f.jordanp.koding.io:3000'
   
   # In the development environment your application's code is reloaded on

@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: blogly
+  username: blogly
+  password: bloglyblogly
+  host: blogly.c4dldov9a35s.us-west-2.rds.amazonaws.com
+  port: 3306
